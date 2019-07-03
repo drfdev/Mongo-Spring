@@ -1,0 +1,14 @@
+sudo systemctl status mongodb
+
+sudo systemctl stop mongodb
+sudo systemctl start mongodb
+
+use drfspring
+
+db.createUser({
+	user:"drfsp",
+	pwd:"drfspring",
+	roles:[
+		{role:"readWrite", db:"drfspring"}
+	]
+})
