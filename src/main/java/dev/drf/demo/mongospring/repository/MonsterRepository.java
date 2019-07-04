@@ -8,12 +8,13 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface MonsterRepository extends MongoRepository<Monster, ObjectId> {
 
-    Monster findFirstByName(String name);
+    Optional<Monster> findFirstByName(String name);
 
-    @Query("{\"name\": { $regex: :regexName}}")
-    List<Monster> searchByRegExpName(@Param("regexName") String name);
+    @Query("{\"name\": { $regex: ?0}}")
+    List<Monster> searchByRegExpName(String name);
 }

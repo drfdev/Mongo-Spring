@@ -12,3 +12,5 @@ db.createUser({
 		{role:"readWrite", db:"drfspring"}
 	]
 })
+
+show users

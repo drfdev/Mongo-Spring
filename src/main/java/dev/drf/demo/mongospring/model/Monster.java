@@ -25,8 +25,7 @@ public class Monster {
     @Field
     private String description;
 
-    public Monster(ObjectId id) {
-        this.id = id;
+    public Monster() {
     }
 
     public ObjectId getId() {
