@@ -1,0 +1,19 @@
+db.createCollection("users")
+db.users.insertOne({
+    "login": "user1",
+    "password": "_test",
+    "roles": [
+        "read", "write", "admin"
+    ],
+    "salt": "_user_21"
+})
+db.users.find().pretty()
+
+db.createCollection("monsters")
+db.monsters.insertOne({
+    "name": "monster1",
+    "age": 10,
+    "combatPower": 1024,
+    "description": "monster #1"
+})
+db.monsters.find().pretty()
