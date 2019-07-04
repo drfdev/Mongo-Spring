@@ -17,3 +17,6 @@ db.monsters.insertOne({
     "description": "monster #1"
 })
 db.monsters.find().pretty()
+
+db.users.createIndex({"login": 1})
+db.monsters.createIndex({"name": 1})
